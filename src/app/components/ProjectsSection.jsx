@@ -26,7 +26,7 @@ const projectsData = [
   {
     id: 3,
     title: "Movie rating and listing",
-    description: "A simple website using the TMDB API, ReactJS and SwiperJS.",
+    description: "A simple website using the TMDB API and ReactJS.",
     image: "/images/projects/wireframe-home.png",
     tag: ["All", "Web"],
     gitUrl:"https://github.com/abnerkaizer/wireframe",
