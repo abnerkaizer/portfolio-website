@@ -7,7 +7,7 @@ const Footer = () => {
           <span className="text-muted">
             <Image src={"/images/ASK-no-bg.png"} width={90} height={90} alt='Logo'></Image>
           </span>
-          <p className="text-slate-600">All rights reserved.</p>
+          <p className="text-slate-600"> Abner Kaizer <br /> MIT License.</p>
         </div>
       </footer>
     );
