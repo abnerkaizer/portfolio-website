@@ -2,6 +2,7 @@
 import React, { useState, useTransition } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
+import Link from 'next/link';
 
 const TAB_DATA = [
   {
@@ -29,7 +30,7 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>Crash Course on Python</li>
+        <li><Link  className="hover:text-primary-300" href="https://drive.google.com/file/d/1_41dQIXCyVuhSRWFxbbgBGyFudd52_Bz/view?usp=sharing">Crash Course on Python</Link></li>
       </ul>
     ),
   },
