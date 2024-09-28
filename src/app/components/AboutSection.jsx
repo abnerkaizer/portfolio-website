@@ -30,7 +30,7 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li><Link  className="hover:text-white" href="https://cloud.abnerkaizer.com/s/nD9JAZ5pJPf69q4">Crash Course on Python</Link></li>
+        <li><Link  className="hover:text-primary-500" href="https://cloud.abnerkaizer.com/s/nD9JAZ5pJPf69q4">Crash Course on Python</Link></li>
       </ul>
     ),
   },
