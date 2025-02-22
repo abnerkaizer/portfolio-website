@@ -35,13 +35,13 @@ const HeroSection = () => {
           </p>
           <div>
             <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white">
-            <Link href={"#contact"}>Hire me</Link>           
+            <Link href={"#contact"}>Contact me</Link>           
             </button>
-            <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3">
+            {/* <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3">
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
               <Link href={"https://drive.google.com/file/d/1dHDkVNZSsre_Li3FyD4qFBDuinGG86LS/view?usp=sharing"}>Download CV</Link> 
               </span>
-            </button>
+            </button> */}
           </div>
         </motion.div>
         <motion.div
