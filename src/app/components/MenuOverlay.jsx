@@ -1,4 +1,7 @@
-import React from "react";
+// ✅ Este componente pode ser DELETADO.
+// O menu mobile agora é tratado pelo <Sheet> do shadcn dentro do Navbar.jsx.
+// Mantido aqui apenas como referência.
+
 import NavLink from "./NavLink";
 
 const MenuOverlay = ({ links }) => {

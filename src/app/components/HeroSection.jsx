@@ -4,6 +4,8 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
+
 const HeroSection = () => {
   return (
     <section className="lg:py-16">
@@ -15,42 +17,58 @@ const HeroSection = () => {
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
           <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-primary-400 to-secondary-600">
               Hello, I&apos;m{" "}
             </span>
-            <br></br>
-            <TypeAnimation
-              sequence={[
-                "Abner",
-                1000,
-                "Web Developer",
-                1000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-            />
+            <br />
+            <span className="inline-block -ml-1 sm:-ml-2 lg:-ml-4">
+              <TypeAnimation
+                sequence={[
+                  "Abner",
+                  1000,
+                  "Web Developer",
+                  1000,
+                  "Computer Engineer",
+                  1000,
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+              />
+            </span>
           </h1>
-          <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-          </p>
-          <div>
-            <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white">
-            <Link href={"#contact"}>Contact me</Link>           
-            </button>
-            {/* <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3">
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-              <Link href={"https://drive.google.com/file/d/1dHDkVNZSsre_Li3FyD4qFBDuinGG86LS/view?usp=sharing"}>Download CV</Link> 
-              </span>
-            </button> */}
+          <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl" />
+
+          <div className="flex flex-col sm:flex-row gap-3">
+            {/* ✅ Corrigido: Button como asChild para o Link ser o elemento raiz */}
+            <Button
+              asChild
+              className="rounded-full bg-linear-to-br from-primary-500 to-secondary-500 hover:opacity-90 text-white px-6 py-3 w-full sm:w-fit"
+            >
+              <Link href="#contact">Contact me</Link>
+            </Button>
+
+            {/* Download CV — descomente quando quiser reativar
+            <Button
+              asChild
+              variant="outline"
+              className="rounded-full border-transparent bg-gradient-to-br from-primary-500 to-secondary-500 p-[2px] w-full sm:w-fit"
+            >
+              <Link href="https://drive.google.com/file/d/1dHDkVNZSsre_Li3FyD4qFBDuinGG86LS/view?usp=sharing">
+                Download CV
+              </Link>
+            </Button>
+            */}
           </div>
         </motion.div>
+
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
-          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[450px] lg:h-[450px] relative">
+          <div className="rounded-full bg-[#181818] w-62.5 h-62.5 lg:w-112.5 lg:h-112.5 relative">
             <Image
               src="/images/dev-no-bg.png"
               alt="hero image"
