@@ -23,14 +23,7 @@ const HeroSection = () => {
             <br />
             <span className="inline-block -ml-1 sm:-ml-2 lg:-ml-4">
               <TypeAnimation
-                sequence={[
-                  "Abner",
-                  1000,
-                  "Web Developer",
-                  1000,
-                  "Computer Engineer",
-                  1000,
-                ]}
+                sequence={["Abner", 1000, "Web Developer", 1000]}
                 wrapper="span"
                 speed={50}
                 repeat={Infinity}
@@ -43,7 +36,7 @@ const HeroSection = () => {
             {/* ✅ Corrigido: Button como asChild para o Link ser o elemento raiz */}
             <Button
               asChild
-              className="rounded-full bg-linear-to-br from-primary-500 to-secondary-500 hover:opacity-90 text-white px-6 py-3 w-full sm:w-fit"
+              className="rounded-full bg-linear-to-br from-primary-500 to-secondary-500 hover:text-blue-500 text-white px-6 py-3 w-full sm:w-fit"
             >
               <Link href="#contact">Contact me</Link>
             </Button>

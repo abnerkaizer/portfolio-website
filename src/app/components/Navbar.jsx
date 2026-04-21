@@ -44,7 +44,7 @@ const Navbar = () => {
                 <NavigationMenuItem key={link.title}>
                   <NavigationMenuLink
                     asChild
-                    className={`${navigationMenuTriggerStyle()} bg-transparent! text-white! hover:text-[#ADB7BE]! focus:text-white!`}
+                    className={`${navigationMenuTriggerStyle()} bg-transparent! text-white! hover:text-blue-500! focus:text-white!`}
                   >
                     <Link href={link.path}>{link.title}</Link>
                   </NavigationMenuLink>
@@ -67,7 +67,7 @@ const Navbar = () => {
                     key={link.title}
                     href={link.path}
                     onClick={() => setOpen(false)}
-                    className="text-white text-xl hover:text-[#ADB7BE] transition-colors px-2 py-1"
+                    className="text-white text-xl hover:text-blue-500 transition-colors px-2 py-1"
                   >
                     {link.title}
                   </Link>

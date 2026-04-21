@@ -21,7 +21,12 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2 text-white">
-        <li>Centro Federal de Educação Tecnológica de Minas Gerais</li>
+        <Link
+          className="hover:text-blue-400"
+          href="https://drive.google.com/file/d/1J6VYx7ru7vJGD9bt_KYMp4afFJQiqdFC/view?usp=sharing"
+        >
+          <li>Centro Federal de Educação Tecnológica de Minas Gerais</li>
+        </Link>
       </ul>
     ),
   },
@@ -32,10 +37,26 @@ const TAB_DATA = [
       <ul className="list-disc pl-2 text-white">
         <li>
           <Link
-            className="hover:text-primary-500 underline"
+            className="hover:text-blue-400"
             href="https://drive.google.com/file/d/15QDbFsgubRkskZK1g1p7Y-lun4Am_J4w/view?usp=sharing"
           >
             Crash Course on Python
+          </Link>
+        </li>
+        <li>
+          <Link
+            className="hover:text-blue-400"
+            href="https://drive.google.com/file/d/1byw5O7EkjHIcWrFl1HDjfkpgMzZq9gt8/view?usp=sharing"
+          >
+            Java Spring Boot 3
+          </Link>
+        </li>
+        <li>
+          <Link
+            className="hover:text-blue-400"
+            href="https://drive.google.com/file/d/1lZtVh9GIFY7D8AB79WTNcpj86vFy9rUi/view?usp=sharing"
+          >
+            EF SET Certificate
           </Link>
         </li>
       </ul>
@@ -47,7 +68,6 @@ const AboutSection = () => {
   return (
     <section id="about" className="text-white">
       <div className="gap-8 items-center py-8 px-4 xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-16">
-        {/* ✅ Image corrigida: container com posição e altura, sem props legadas */}
         <div className="relative w-full h-80 md:h-full min-h-80 rounded-xl overflow-hidden">
           <Image
             src="/images/setup.jpg"
@@ -69,7 +89,6 @@ const AboutSection = () => {
             with others to create amazing applications.
           </p>
 
-          {/* ✅ TabButton custom substituído por shadcn Tabs */}
           <Tabs defaultValue="skills" className="mt-8">
             <TabsList className="bg-transparent gap-2 p-0 justify-start">
               {TAB_DATA.map((t) => (
@@ -77,11 +96,11 @@ const AboutSection = () => {
                   key={t.id}
                   value={t.id}
                   className="
-                    px-0 pb-2 mr-3 rounded-none bg-transparent text-[#ADB7BE]
+                    px-0 pb-2 mr-3 rounded-none bg-transparent text-white
                     font-semibold border-b-2 border-transparent
-                    data-[state=active]:text-white data-[state=active]:border-primary-500
+                    data-[state=active]:text-blue-500 data-[state=active]:border-primary-500
                     data-[state=active]:bg-transparent data-[state=active]:shadow-none
-                    hover:text-white transition-colors
+                    hover:text-blue-500 transition-colors
                   "
                 >
                   {t.title}
