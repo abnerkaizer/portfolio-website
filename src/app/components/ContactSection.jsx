@@ -2,6 +2,7 @@
 import React from "react";
 import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
+import CodebergIcon from "../../../public/codeberg-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -31,6 +32,9 @@ const ContactSection = () => {
         <div className="socials flex flex-row gap-2">
           <Link href="https://github.com/abnerkaizer">
             <Image src={GithubIcon} alt="Github Icon" />
+          </Link>
+          <Link href="https://codeberg.org/abner">
+            <Image src={CodebergIcon} alt="Codeberg Icon" />
           </Link>
           <Link href="https://linkedin.com/in/abnerkaizer">
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
