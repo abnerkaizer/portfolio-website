@@ -17,11 +17,11 @@ const HeroSection = () => {
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
           <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-primary-400 to-secondary-600">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-500 to-blue-700">
               Hello, I&apos;m{" "}
             </span>
             <br />
-            <span className="inline-block -ml-1 sm:-ml-2 lg:-ml-4">
+            <span className="inline-block sm:-ml-2 lg:-ml-4">
               <TypeAnimation
                 sequence={["Abner", 1000, "Web Developer", 1000]}
                 wrapper="span"

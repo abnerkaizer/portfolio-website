@@ -2,7 +2,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { Bars3Icon } from "@heroicons/react/24/solid";
 
 import {
   NavigationMenu,
@@ -12,7 +11,6 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { title: "About", path: "#about" },
@@ -26,7 +24,6 @@ const Navbar = () => {
   return (
     <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212]">
       <div className="container flex flex-wrap items-center justify-between mx-auto px-4 py-2 lg:py-4">
-        {/* Logo */}
         <Link href="/">
           <Image
             src="/images/ASK-no-bg.png"
@@ -36,7 +33,6 @@ const Navbar = () => {
           />
         </Link>
 
-        {/* Desktop nav */}
         <div className="hidden md:block">
           <NavigationMenu>
             <NavigationMenuList>
@@ -54,7 +50,6 @@ const Navbar = () => {
           </NavigationMenu>
         </div>
 
-        {/* Mobile nav — Sheet */}
         <div className="md:hidden">
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetContent

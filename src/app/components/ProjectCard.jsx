@@ -1,15 +1,11 @@
 import React from "react";
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import {
-  Card,
-  CardContent,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 
 const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
   return (
     <Card className="bg-[#181818] border-0 rounded-xl overflow-hidden p-0">
-      {/* Imagem com overlay de hover */}
       <div
         className="h-52 md:h-72 relative group"
         style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
