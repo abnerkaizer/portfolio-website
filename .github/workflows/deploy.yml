@@ -1,0 +1,48 @@
+name: Deploy Portfolio
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20" # Ou a versão que você usa no Debian 13
+          cache: "npm"
+
+      - name: Install & Build
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy to Server via SSH
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.HOST }}
+          username: node
+          key: ${{ secrets.SSH_KEY }}
+          # Enviamos apenas o necessário para produção
+          source: ".next,public,package.json,next.config.js,node_modules"
+          target: "/var/www/portfolio-website/staging"
+
+      - name: Activate New Build with PM2
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: node
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+
+            mkdir -p /var/www/portfolio-website/current
+
+            rsync -av --delete /var/www/portfolio-website/staging/ /var/www/portfolio-website/current/
+
+            cd /var/www/portfolio-website/current
+            pm2 reload portfolio || pm2 start npm --name "portfolio" -- run start -- -p 3000
+
+            pm2 save
